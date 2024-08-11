@@ -9,9 +9,8 @@ import { Home } from './Pages/Home.js';
 import { Destination } from './Pages/Explore.js';
 import { Crew } from './Pages/Question.js';
 import { Technology } from './Pages/Technology.js';
-import { useEffect, useState } from 'react';
 import  { CourseState } from './context/courseProvider.js';
-
+import Course from './Components/course.jsx';
 
 
 const data = require('./Assets/shared/data.json');
@@ -20,8 +19,8 @@ function App() {
 
 
     const { setAllCourses} = CourseState();
+  
     const location = useLocation();
-
     const [mainClass, setMainClass] = useState('');
 
     const [mainStyle, setMainStyle] = useState(styles.main);
@@ -78,6 +77,7 @@ function App() {
             <main className={mainStyle}>
             <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/course" element={<Course />} />
                 <Route path="destination" element={<Destination data={data.destinations}  />} />
                 <Route path="crew" element={<Crew data={data.crew} />} />
                 <Route path="technology" element={<Technology data={data.technology} />} />

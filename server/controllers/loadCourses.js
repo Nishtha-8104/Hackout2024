@@ -15,7 +15,7 @@ const loadCourses = async (req, res) => {
 const grabCourse = async (req, res) => {
   const { courseid } = req.body;
 
-  // console.log(req.body    );
+  console.log(req.body    );
 
   try {
     const data = await pool.query(

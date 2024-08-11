@@ -2,14 +2,16 @@ import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import '../index.scss';
 import { Box, Flex, Heading, Image, Table, Tbody, Td, Text, Th, Thead, Tr } from '@chakra-ui/react';
+import { CourseState } from '../context/courseProvider';
 const ENDPOINT = "http://localhost:3001/api";
 function Course() {
-  const location = useLocation();
+
   const [course,setCourse]=useState([]);
-  const { data1 } = location.state || {}; // Access the data1 passed through navigation
+  const {courseid}=CourseState()
+  // const data1=courseid;
   useEffect(() => {
     async function loaddata() {
-      if (!data1 || !data1.courseid) {
+      if (!courseid ) {
         console.log('No course id provided');
         return;
       }
@@ -20,11 +22,11 @@ function Course() {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ courseid: data1.courseid }), // Correctly include courseid in the body
+          body: JSON.stringify({ courseid: courseid }), // Correctly include courseid in the body
         });
 
         const data = await response.json();
-        // console.log(data);
+        console.log(data);
         if (response.ok) {
           setCourse(data);
         } else {
@@ -36,11 +38,11 @@ function Course() {
     }
 
     loaddata();
-  }, [data1]);
-  console.log(course);
+  }, [courseid]);
+  console.log(courseid);
   return (
     <Box p='4'>
-      {data1 ? (
+      {course ? (
         <Box>
           <Heading size='lg' color='white' fontSize='50px'>{course.coursename}</Heading>
           <Image

@@ -16,13 +16,16 @@ import {
   Box,
 } from "@chakra-ui/react";
 import {useNavigate} from 'react-router-dom';
+import { CourseState } from '../context/courseProvider';
 
 
 function Cardi({data1}){
   const navigate = useNavigate();
-
+   const {setCourseid}=CourseState();
   const handlefunction = () => {
-    navigate('/course', { state: { data1 } });
+    setCourseid(data1.courseid);
+    
+    navigate('/course');
   };
     return (<Box width="100%" height="100%">
         <Card maxW='sm' className="card">
@@ -44,8 +47,7 @@ function Cardi({data1}){
   <Divider />
   <CardFooter>
     <ButtonGroup spacing='2'>
-      <Button variant='solid' colorScheme='blue' onClick={handlefunction}>
-
+      <Button variant='solid' colorScheme='blue' onClick={handlefunction} >
         More Details
 
       </Button>

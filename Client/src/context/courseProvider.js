@@ -8,9 +8,7 @@ const CourseProvider = ({ children }) => {
   const [selectedCourses, setSelectedCourses] = useState([]);
   const [allCourses, setAllCourses] = useState([]);
   const [user, setUser] = useState();
-
-
-
+  const [courseid,setCourseid]=useState();
 
   return (
     <CourseContext.Provider
@@ -18,7 +16,9 @@ const CourseProvider = ({ children }) => {
       selectedCourses,
       setSelectedCourses,
       allCourses,
-      setAllCourses
+      setAllCourses,
+      courseid,
+      setCourseid
       }}
     >
       {children}
