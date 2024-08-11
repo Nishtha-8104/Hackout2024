@@ -9,7 +9,7 @@ import { Home } from './Pages/Home.js';
 import { Destination } from './Pages/Explore.js';
 import { Crew } from './Pages/Question.js';
 import { Technology } from './Pages/Technology.js';
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import  { CourseState } from './context/courseProvider.js';
 
 
