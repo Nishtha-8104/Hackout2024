@@ -13,6 +13,8 @@ const loadCourses = async (req, res) => {
 };
 
 const grabCourse = async (req, res) => {
+
+  console.log("grabCourse");
   const { courseid } = req.body;
 
   console.log(req.body    );
