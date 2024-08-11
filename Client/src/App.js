@@ -15,7 +15,7 @@ import Course from './Components/course.jsx';
 
 
 const data = require('./Assets/shared/data.json');
-const ENDPOINT = "https://hackout2024-l5tk.onrender.com";
+const ENDPOINT = "https://hackout2024-l5tk.onrender.com/api";
 function App() {
 
 

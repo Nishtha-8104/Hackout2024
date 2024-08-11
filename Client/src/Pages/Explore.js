@@ -12,7 +12,7 @@ import { Grid, GridItem } from "@chakra-ui/react";
 import { CourseState } from "../context/courseProvider";
 
 
-const ENDPOINT = "https://hackout2024-l5tk.onrender.com";
+const ENDPOINT = "https://hackout2024-l5tk.onrender.com/api";
 
 export function Destination({ data }) {
   const [selectedPlanet, setSelectedPlanet] = useState(data[0]);

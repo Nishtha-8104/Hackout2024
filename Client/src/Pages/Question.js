@@ -15,7 +15,7 @@ import { CourseState } from "../context/courseProvider";
 import { Checkbox, CheckboxGroup, Stack } from "@chakra-ui/react";
 import ScrollableFeed from "react-scrollable-feed";
 
-const ENDPOINT = "https://hackout2024-l5tk.onrender.com";
+const ENDPOINT = "https://hackout2024-l5tk.onrender.com/api";
 
 export function Crew({ data }) {
   const { isOpen, onOpen, onClose } = useDisclosure();

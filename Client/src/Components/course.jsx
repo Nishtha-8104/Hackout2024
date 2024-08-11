@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import '../index.scss';
 import { Box, Flex, Heading, Image, Table, Tbody, Td, Text, Th, Thead, Tr } from '@chakra-ui/react';
 import { CourseState } from '../context/courseProvider';
-const ENDPOINT = "https://hackout2024-l5tk.onrender.com";
+const ENDPOINT = "https://hackout2024-l5tk.onrender.com/api";
 function Course() {
 
   const [course,setCourse]=useState([]);
