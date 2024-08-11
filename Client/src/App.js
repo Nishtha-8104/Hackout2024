@@ -13,6 +13,7 @@ import  { CourseState } from './context/courseProvider.js';
 import Course from './Components/course.jsx';
 
 
+
 const data = require('./Assets/shared/data.json');
 const ENDPOINT = "http://localhost:3001/api";
 function App() {
