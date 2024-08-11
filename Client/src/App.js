@@ -11,7 +11,7 @@ import { Crew } from './Pages/Question.js';
 import { Technology } from './Pages/Technology.js';          
 import  { CourseState } from './context/courseProvider.js';
 import Course from './Components/course.jsx';
-
+localStorage.setItem("chakra-ui-color-mode","dark");
 
 
 const data = require('./Assets/shared/data.json');
